@@ -1,0 +1,14 @@
+#!ocaml -init
+(* To get a usable toplevel with obac modules:
+   - First compile obac in bytecode: "make byte"
+   - Then launch: ocaml -init main.top
+     Normally, thanks to the #! above, this file could even be executed
+     directly via: ./main.top
+*)
+
+#directory "_build";;
+#load_rec "main.cmo";;
+open Expr;;
+let () = print_string
+"Obac modules loaded.
+You can parse a phrase via: Parsexpr.expr_of_string \"...\"\n\n"

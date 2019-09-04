@@ -1,0 +1,14 @@
+"parsexpr.ml" : pp(camlp4o)
+"mathexpr.ml" : pp(camlp4o)
+"simplify.ml": pp(camlp4o)
+"derivative.ml" : pp(camlp4o)
+"plot.ml" : pp(camlp4o)
+## Note: To add an extra library to your program, you could
+## uncomment and adapt the following lines. The "use_xxxx"
+## is for libraries provided by OCaml (for instance Unix),
+## while the "package(xxxx)" is for third-party libraries to be
+## searched by ocamlfind (add a -use-ocamlfind to ocamlbuild in
+## Makefile)
+
+<main.{native,byte}> :use_graphics
+#true : package(foo), package(bar)
